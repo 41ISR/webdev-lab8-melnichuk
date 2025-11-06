@@ -1,0 +1,19 @@
+meta {
+  name: Get current user
+  type: http
+  seq: 6
+}
+
+get {
+  url: https://kitek.ktkv.dev/marketplace/api/auth/me
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE3NjI0MTUwOTM5MzQsInVzZXJuYW1lIjoibWVsb2siLCJpYXQiOjE3NjI0MTUxMzQsImV4cCI6MTc2MjUwMTUzNH0.6BwvEYSFyZucs4SK9t3uoE-MDOK5vpOwnZLHEqGy1So
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Get items copy
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://kitek.ktkv.dev/marketplace/api/items/:id/bids
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 1761625220268
+}
+
+settings {
+  encodeUrl: true
+}

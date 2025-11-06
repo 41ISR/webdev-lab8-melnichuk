@@ -1,0 +1,25 @@
+meta {
+  name: Current users bids
+  type: http
+  seq: 11
+}
+
+get {
+  url: https://kitek.ktkv.dev/marketplace/api/bids/my
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE3NjI0MTUwOTM5MzQsInVzZXJuYW1lIjoibWVsb2siLCJpYXQiOjE3NjI0MTUxMzQsImV4cCI6MTc2MjUwMTUzNH0.6BwvEYSFyZucs4SK9t3uoE-MDOK5vpOwnZLHEqGy1So
+}
+
+body:json {
+  {
+    "amount": 9869653787587260985600
+  }
+}
+
+settings {
+  encodeUrl: true
+}
