@@ -2,7 +2,7 @@
 
 import { api } from "@/app/_api/api"
 import { useUserStore } from "@/app/_store/useUserStore"
-import { FormEvent, useState } from "react"
+import { FormEvent, useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 
 export default function Page () {
@@ -14,6 +14,7 @@ export default function Page () {
     const [email, setEmail] = useState<string>('')
     const [password, setPass] = useState<string>('')
     const [passwordCh, setPassCh] = useState<string>('')
+    const [passat, setPassat] = useState<string>('')
     
     const handleSubmit = async (e:FormEvent) => {
         e.preventDefault()
@@ -34,6 +35,19 @@ export default function Page () {
             setError(err.message)
         }
     }
+
+    useEffect(() => {
+        if(password.length >=6 && password.length < 8){
+            setPassat('weak')
+        }else if(password.length >=8 && password.length < 11){
+            setPassat('medium')
+        } else if(password.length >= 11){
+            setPassat('strong')
+        }
+        else{
+            setPassat('')
+        }
+    },[password])
 
     return (
         <div className="auth-container">
@@ -93,7 +107,7 @@ export default function Page () {
                         onChange={(e) => setPass(e.target.value)}
                     />
                     <div className="password-strength">
-                        <div className="password-strength-bar" id="password-strength-bar"></div>
+                        <div className={`password-strength-bar ${passat}`} id="password-strength-bar"></div>
                     </div>
                     <div className="form-hint">Минимум 6 символов</div>
                     <div className="form-error">Пароль должен быть не менее 6 символов</div>

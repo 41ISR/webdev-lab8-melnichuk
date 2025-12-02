@@ -10,7 +10,7 @@ import StatsInterface from "./_interface/StatsInterface";
 
 export default function Page () {
   const {items, getItems} = useItemStore()
-  const [stats, setStats] = useState({})
+  const [stats, setStats] = useState<StatsInterface>()
 
   useEffect(() => {
     const getStats = async () => {

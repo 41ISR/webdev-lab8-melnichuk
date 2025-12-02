@@ -1,6 +1,87 @@
 {
-  "items": [],
-  "bids": [],
+  "items": [
+    {
+      "id": 1764308985708,
+      "title": "esgawrharg",
+      "description": "rrhaerharg",
+      "price": 1401,
+      "imageUrl": null,
+      "userId": 1764306231036,
+      "username": "melok",
+      "status": "active",
+      "highestBid": null,
+      "bidCount": 0,
+      "createdAt": "2025-11-28T05:49:45.708Z"
+    },
+    {
+      "id": 1764309387547,
+      "title": "<img src=\"ea\" onError=\"alert('123')\">",
+      "description": "sdegaeg",
+      "price": 2535,
+      "imageUrl": null,
+      "userId": 1764306231036,
+      "username": "melok",
+      "status": "active",
+      "highestBid": 10000000,
+      "bidCount": 3,
+      "createdAt": "2025-11-28T05:56:27.547Z"
+    },
+    {
+      "id": 1764653516874,
+      "title": "сыр",
+      "description": "Некоторые виды сыра:\n - Твёрдые — обычно имеют длительный срок созревания и высокую плотность, отличаются насыщенным вкусом, часто с ореховыми или пряными оттенками. Например, пармезан, гауда.\n - Мягкие — отличаются более нежной текстурой и ярко выраженным вкусом, могут быть как солёными, так и сладковатыми. Например, камамбер, бри, фета.\n - Рассольные — созревают и хранятся в рассоле, благодаря чему имеют особенную текстуру и более солёный вкус. К таким сырам относятся фета, брынза, адыгейский.\n - Плавленый — изготавливается из створоженного молока с добавлением растительных жиров и солей-плавителей. Может иметь пастообразную или плотную консистенцию, солёный или сладкий вкус.",
+      "price": 1500,
+      "imageUrl": "https://yastatic.net/naydex/yandex-search/WPs7Jb941/1f39aejpM/yOp_tuejbSzIKoLyvXPGl7YKl46zQXsYd6ro3ApOtwiDLl1vX_2O7gbCnjLc5GUjykcXbyKJjYhi29S0QUYXVJ3-zu7vyggtqTvL78RvxoPnJr6-23E7TUff5LRDLofQbt-Qg6dQJl_6b0c21NB5Mv43TzPTO",
+      "userId": 1764584713656,
+      "username": "sasha-melok",
+      "status": "active",
+      "highestBid": 3000,
+      "bidCount": 2,
+      "createdAt": "2025-12-02T05:31:56.874Z"
+    }
+  ],
+  "bids": [
+    {
+      "id": 1764651047760,
+      "itemId": 1764309387547,
+      "userId": 1764584713656,
+      "username": "sasha-melok",
+      "amount": 23451,
+      "createdAt": "2025-12-02T04:50:47.760Z"
+    },
+    {
+      "id": 1764651762514,
+      "itemId": 1764309387547,
+      "userId": 1764651717883,
+      "username": "salam",
+      "amount": 235153,
+      "createdAt": "2025-12-02T05:02:42.514Z"
+    },
+    {
+      "id": 1764652379921,
+      "itemId": 1764309387547,
+      "userId": 1764584713656,
+      "username": "sasha-melok",
+      "amount": 10000000,
+      "createdAt": "2025-12-02T05:12:59.921Z"
+    },
+    {
+      "id": 1764653556165,
+      "itemId": 1764653516874,
+      "userId": 1764306231036,
+      "username": "melok",
+      "amount": 2000,
+      "createdAt": "2025-12-02T05:32:36.165Z"
+    },
+    {
+      "id": 1764653710434,
+      "itemId": 1764653516874,
+      "userId": 1764651717883,
+      "username": "salam",
+      "amount": 3000,
+      "createdAt": "2025-12-02T05:35:10.434Z"
+    }
+  ],
   "users": [
     {
       "id": 1,
@@ -8,6 +89,34 @@
       "email": "test@example.com",
       "password": "$2b$10$EgVDQPfrj9sgt3bDDXjX9egBZ5bL0JS.c/Vmgas3mS1YoAi8V9K8.",
       "createdAt": "2025-10-20T06:53:56.986Z"
+    },
+    {
+      "id": 1764306231036,
+      "username": "melok",
+      "email": "melok@melok",
+      "password": "$2b$10$EIs/uxVQ.7S9C36DKrjlr.DrRj3BBAnzLHjXUHnvlPYKt9dJA7NNa",
+      "createdAt": "2025-11-28T05:03:51.036Z"
+    },
+    {
+      "id": 1764313834801,
+      "username": "nan",
+      "email": "nan@nan",
+      "password": "$2b$10$CTEzThHXiayzGF8l1q2Gre7tiHpbUG2sDUrVOdJA6bXsAW76g/iWW",
+      "createdAt": "2025-11-28T07:10:34.801Z"
+    },
+    {
+      "id": 1764584713656,
+      "username": "sasha-melok",
+      "email": "melok@mel",
+      "password": "$2b$10$u4ZvMt2oEVylhwkTskFE1ObNIxU/ahCe0MCyR/YZL52x8uE/DkBum",
+      "createdAt": "2025-12-01T10:25:13.656Z"
+    },
+    {
+      "id": 1764651717883,
+      "username": "salam",
+      "email": "salam@example.com",
+      "password": "$2b$10$V5J1lHLPwk80uKhkI3i8c.3IkCN7acTyo3Prr/47x92QbPlWKvZaC",
+      "createdAt": "2025-12-02T05:01:57.883Z"
     }
   ]
 }

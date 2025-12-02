@@ -2,6 +2,7 @@
 
 import { api } from "@/app/_api/api"
 import { useUserStore } from "@/app/_store/useUserStore"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { FormEvent, use, useState } from "react"
 
@@ -78,7 +79,7 @@ export default function Page () {
         <div className="auth-divider">или</div>
 
         <div className="auth-link">
-            Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+            Нет аккаунта? <Link href="/register">Зарегистрироваться</Link>
         </div>
     </div>
   )

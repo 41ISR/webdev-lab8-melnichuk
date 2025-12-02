@@ -1,30 +1,20 @@
-import Link from "next/link";
-import BidInterface from "../_interface/BidInterface";
-import ItemInterface from "../_interface/ItemInterface";
-import { useItemStore } from "../_store/useItemStore";
+import BidItemInterface from "../_interface/BidItemInterface"
+import timeSince from "../_lib/TimeSince"
 
-export default function BidItem({amount, isWinning, itemTitle, itemId}:BidInterface){
-    const {items} = useItemStore()
-    const item: ItemInterface = items.filter((el) => el.id == itemId)[0]
-    
 
-    return(
-        <div className={`bid-item ${isWinning && "winning"}`}>
-            <img src={item.imageUrl} alt={itemTitle} className="bid-item-image"/>
-            <div className="bid-item-content">
-                <div className="bid-item-header">
-                    <Link href={`/items/${itemId}`} className="bid-item-title">{item.title}</Link>
-                    <span className="winning-badge">{isWinning ? "🏆 Лидирую" : "Перебита"}</span>
+export default function BidItem({id, username, amount, createdAt, isWinning}:BidItemInterface){
+
+    return (
+        <div className={`bid-item ${isWinning && 'highest-bid-item'}`}>
+            <div className="bid-user">
+                <div className="bid-avatar">{username[0].toUpperCase()}</div>
+                <div className="bid-details">
+                    <span className="bid-username">{username}</span>
+                    <span className="bid-time">{timeSince(createdAt)}</span>
                 </div>
-                <div className="bid-item-meta">
-                    <span>⏰ 2 часа назад</span>
-                    <span>💰 Начальная: {item.price} ₽</span>
-                </div>
+                {isWinning && <span className="highest-badge">🏆 Лидирует</span>}
             </div>
-            <div className="bid-item-amount">
-                <span className="bid-amount">{amount} ₽</span>
-                <span className="bid-status">Моя ставка</span>
-            </div>
+            <div className="bid-amount">{amount} ₽</div>
         </div>
     )
 }
